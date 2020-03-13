@@ -35,14 +35,14 @@ fprintf(1,'neff = %.6f\n',neff);
 for i=1:nmodes
 figure(1);
 subplot(121);
-% contourmode(x,y,Hx(:,:,i));
-surfrmode(x,y,Hx(:,:,i));
+% contourmode(x,y,Hx);
+surfrmode(x,y,Hx);
 title('Hx (TE mode)'); xlabel('x'); ylabel('y'); 
 for v = edges, line(v{:}); end
 
 subplot(122);
-%contourmode(x,y,Hy(:,:,i));
-surfmode(x,y,Hy(:,:,i));
+%contourmode(x,y,Hy);
+surfmode(x,y,Hy);
 title('Hy (TE mode)'); xlabel('x'); ylabel('y'); 
 for v = edges, line(v{:}); end
 end
@@ -55,14 +55,14 @@ fprintf(1,'neff = %.6f\n',neff);
 for i=1:nmodes
 figure(2);
 subplot(121);
-%contourmode(x,y,Hx(:,:,i));
-surfmode(x,y,Hx(:,:,i));
+%contourmode(x,y,Hx);
+surfmode(x,y,Hx);
 title('Hx (TM mode)'); xlabel('x'); ylabel('y'); 
 for v = edges, line(v{:}); end
 
 subplot(122);
-%contourmode(x,y,Hy(:,:,i));
-surfmode(x,y,Hy(:,:,i));
+%contourmode(x,y,Hy);
+surfmode(x,y,Hy);
 title('Hy (TM mode)'); xlabel('x'); ylabel('y'); 
 for v = edges, line(v{:}); end
 end 
